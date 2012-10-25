@@ -18,9 +18,9 @@
 - (id)init
 {    
     //self.url = [NSURL URLWithString:@"http://imaladec.com/rss.php"];
-    //self.url = [NSURL URLWithString:@"http://tproger.ru/rss/feed"];
+    self.url = [NSURL URLWithString:@"http://tproger.ru/rss/feed"];
     
-    self.url = [NSURL URLWithString:@"http://feeds.feedburner.com/TheAppleBlog"];
+    //self.url = [NSURL URLWithString:@"http://feeds.feedburner.com/TheAppleBlog"];
     self.theRequest=[NSURLRequest requestWithURL:url
                                               cachePolicy:NSURLRequestUseProtocolCachePolicy
                                           timeoutInterval:60.0];

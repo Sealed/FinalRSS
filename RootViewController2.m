@@ -40,9 +40,9 @@
 {
     NSString *a = [NSString string];
     a = [parser.parData.feedURL objectAtIndex:indexPath.row];
+    NSLog(@"%@",a);
     SecondViewController *second = [[SecondViewController alloc] initwithurl:a];
-    [self.navigationController pushViewController:second animated:YES];
-    [second release];
+    [self.navigationController pushViewController:second animated:YES];    
     
 }
 

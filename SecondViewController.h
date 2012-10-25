@@ -12,8 +12,10 @@
 {
     NSURL *url;
     UIWebView *browser;
+    NSString *texturl;
     
 }
+@property(nonatomic,retain) NSString *texturl;
 @property(nonatomic,retain) UIWebView *browser;
 @property(nonatomic,retain) NSURL *url;
 

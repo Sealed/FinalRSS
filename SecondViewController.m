@@ -16,10 +16,11 @@
 @implementation SecondViewController
 @synthesize url;
 @synthesize browser;
+@synthesize texturl;
 
 -(id)initwithurl:(NSString *)text
 {
-    url = [NSURL URLWithString:text];
+    self.texturl = [NSString stringWithString:text];
     return self;
 }
 
@@ -27,9 +28,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    browser = [[UIWebView alloc] initWithFrame:self.view.bounds];
-    [browser loadRequest:[NSURLRequest requestWithURL:url]];
+    browser = [[UIWebView alloc] initWithFrame:self.view.bounds];    
+    self.url = [NSURL URLWithString:self.texturl];
+    NSLog(@"%@",texturl);
     [self.view addSubview:browser];
+    [browser loadRequest:[NSURLRequest requestWithURL:self.url]];
 	// Do any additional setup after loading the view.
 }
 
